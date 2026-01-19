@@ -1,0 +1,10 @@
+:root {
+   --color-background: #0A181B;
+   --color-white-90: rgba(255, 255, 255, 0.9);
+   --color-white-80: rgba(255, 255, 255, 0.8);
+   --color-white-5: rgba(255, 255, 255, 0.05);
+   --color-cyan: rgb(48, 206, 194);
+   --color-cyan-40: rgba(48, 206, 194, 0.4);
+   --color-red: #D73246;
+   --color-blue: #1E88E5;
+}
