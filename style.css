@@ -111,7 +111,6 @@ body {
    flex: 1;
 }
 .sponsor-tag {
-<<<<<<< HEAD
    display: block;
    width: fit-content;
    background-color: var(--color-cyan);
@@ -123,33 +122,8 @@ body {
    letter-spacing: 0.5px;
    margin-bottom: 16px;
    text-transform: uppercase;
-||||||| parent of 96a3ef8 (feat(logo-cloud): add animations and logo randomization)
-    display: inline-block;
-    background-color: var(--color-cyan);
-    color: var(--color-background);
-    padding: 7px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-=======
-    display: block;
-    width: fit-content;
-    background-color: var(--color-cyan);
-    color: var(--color-background);
-    padding: 7px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    margin-bottom: 16px;
-    text-transform: uppercase;
->>>>>>> 96a3ef8 (feat(logo-cloud): add animations and logo randomization)
 }
 .sponsor-name {
-<<<<<<< HEAD
    font-size: 32px;
    font-weight: 800;
    line-height: 38px;
@@ -172,49 +146,6 @@ body {
    35% { left: 0; width: 100%; }
    70% { left: 100%; width: 0; }
    100% { left: 100%; width: 0; }
-||||||| parent of 96a3ef8 (feat(logo-cloud): add animations and logo randomization)
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 38px;
-    margin: 0 0 16px 0;
-=======
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 38px;
-    margin: 0 0 16px 0;
-    position: relative;
-    display: inline-block;
-}
-
-.sponsor-name::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--color-white);
-    animation: underline-loop 2.5s infinite cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-@keyframes underline-loop {
-    0% {
-        left: 0;
-        width: 0;
-    }
-    35% {
-        left: 0;
-        width: 100%;
-    }
-    70% {
-        left: 100%;
-        width: 0;
-    }
-    100% {
-        left: 100%;
-        width: 0;
-    }
->>>>>>> 96a3ef8 (feat(logo-cloud): add animations and logo randomization)
 }
 .sponsor-description {
    font-size: 16px;
@@ -331,7 +262,6 @@ body {
    }
 }
 @media (max-width: 768px) {
-<<<<<<< HEAD
    .container {
       padding: 0 16px;
    }
@@ -411,242 +341,4 @@ body {
    .friends-grid img[alt="SZT"] { height: 34px; }
    .friends-grid img[alt="Grad Split"] { height: 55px; }
    .friends-grid img[alt="Split Tech City"] { height: 11px; }
-||||||| parent of 96a3ef8 (feat(logo-cloud): add animations and logo randomization)
-    .container {
-        padding: 0 16px;
-    }
-
-    .supporting-us {
-        padding: 60px 0;
-    }
-
-    .section-title {
-        font-size: 32px;
-        line-height: 38px;
-        margin-bottom: 60px;
-    }
-
-    .sponsor-block {
-        flex-direction: column;
-        gap: 32px;
-        margin-bottom: 80px;
-    }
-
-    .sponsor-block.reverse {
-        flex-direction: column;
-    }
-
-    .sponsor-image {
-        width: 100%;
-    }
-
-    .sponsor-image img {
-        height: 240px;
-        border-radius: 30px;
-    }
-
-    .sponsor-name {
-        font-size: 24px;
-        line-height: 36px;
-    }
-
-    .sponsor-link img[alt="Shift"] {
-        width: 67px;
-        height: 45px;
-    }
-
-    .sponsor-link img[alt="Netmedia"] {
-        width: 89px;
-        height: 17px;
-    }
-
-    .sponsors {
-        padding-bottom: 40px;
-    }
-
-    .sponsor-tier-title {
-        font-size: 24px;
-        line-height: 32px;
-        margin-bottom: 32px;
-    }
-
-    .sponsor-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px 20px;
-        justify-items: center;
-        margin-bottom: 40px;
-    }
-
-    .silver-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: none;
-        gap: 40px 20px;
-    }
-
-    .organizational-grid, .lottery-grid {
-        display: flex;
-        justify-content: center;
-    }
-
-    .silver-grid img, .bronze-grid img {
-        max-height: 32px;
-    }
-
-    .organizational-grid img, .lottery-grid img {
-        max-height: 40px;
-    }
-
-    .media-grid img[alt="Bug"] {
-        height: 13px;
-    }
-
-    .media-grid img[alt="Dalmacija Danas"] {
-        height: 21px;
-    }
-
-    .media-grid img[alt="Netokracija"] {
-        height: 18px;
-    }
-
-    .media-grid img[alt="Split Tech City"] {
-        height: 12px;
-    }
-
-    .friends-grid img[alt="Svuciliste"] {
-        height: 54px;
-    }
-
-    .friends-grid img[alt="SZT"] {
-        height: 34px;
-    }
-
-    .friends-grid img[alt="Grad Split"] {
-        height: 55px;
-    }
-
-    .friends-grid img[alt="Split Tech City"] {
-        height: 11px;
-    }
-}
-=======
-    .container {
-        padding: 0 16px;
-    }
-
-    .supporting-us {
-        padding: 60px 0;
-    }
-
-    .section-title {
-        font-size: 32px;
-        line-height: 38px;
-        margin-bottom: 60px;
-    }
-
-    .sponsor-block {
-        flex-direction: column;
-        gap: 32px;
-        margin-bottom: 80px;
-    }
-
-    .sponsor-block.reverse {
-        flex-direction: column;
-    }
-
-    .sponsor-image {
-        width: 100%;
-    }
-
-    .sponsor-image img {
-        height: 240px;
-        border-radius: 30px;
-    }
-
-    .sponsor-name {
-        font-size: 24px;
-        line-height: 36px;
-    }
-
-    .sponsor-link img[alt="Shift"] {
-        width: 67px;
-        height: 45px;
-    }
-
-    .sponsor-link img[alt="Netmedia"] {
-        width: 89px;
-        height: 17px;
-    }
-
-    .sponsors {
-        padding-bottom: 40px;
-    }
-
-    .sponsor-tier-title {
-        font-size: 24px;
-        line-height: 32px;
-        margin-bottom: 32px;
-    }
-
-    .sponsor-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px 20px;
-        justify-items: center;
-        margin-bottom: 40px;
-    }
-
-    .silver-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: none;
-        gap: 40px 20px;
-    }
-
-    .organizational-grid, .lottery-grid {
-        display: flex;
-        justify-content: center;
-    }
-
-    .silver-grid img, .bronze-grid img {
-        max-height: 32px;
-    }
-
-    .organizational-grid img, .lottery-grid img {
-        max-height: 40px;
-    }
-
-    .media-grid img[alt="Bug"] {
-        height: 13px;
-    }
-
-    .media-grid img[alt="Dalmacija Danas"] {
-        height: 21px;
-    }
-
-    .media-grid img[alt="Netokracija"] {
-        height: 18px;
-    }
-
-    .media-grid img[alt="Split Tech City"] {
-        height: 12px;
-    }
-
-    .friends-grid img[alt="Sveučilište"] {
-        height: 54px;
-    }
-
-    .friends-grid img[alt="SZT"] {
-        height: 34px;
-    }
-
-    .friends-grid img[alt="Grad Split"] {
-        height: 55px;
-    }
-
-    .friends-grid img[alt="Split Tech City"] {
-        height: 11px;
-    }
->>>>>>> 96a3ef8 (feat(logo-cloud): add animations and logo randomization)
 }
