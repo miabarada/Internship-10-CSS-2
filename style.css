@@ -29,6 +29,7 @@ body {
    position: fixed;
    width: 100%;
    background-color: var(--color-background);
+   z-index: 1000;
 }
 .navbar nav {
    display: flex;
@@ -138,7 +139,7 @@ body {
    height: 2px;
    bottom: -4px;
    left: 0;
-   background-color: var(--color-white);
+   background-color: var(--color-cyan);
    animation: underline-loop 2.5s infinite cubic-bezier(0.65, 0, 0.35, 1);
 }
 @keyframes underline-loop {
