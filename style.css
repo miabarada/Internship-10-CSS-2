@@ -351,6 +351,36 @@ body {
     display: none;
 }
 
+.typewriter::after {
+    color: var(--color-cyan);
+    content: "digitalaca"; 
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    border-right: 8px solid var(--color-cyan);
+    white-space: nowrap;
+    animation: typing 30s steps(8, end) infinite, blink-cursor 2s step-end infinite;
+    width: 0px;
+}
+
+@keyframes typing {
+    0%, 10%  { content: ""; width: 0ch;}
+    10%, 20%   { content: "digitalaca"; width: 8ch}
+    20%, 30%  { content: ""; width: 0ch;}
+    30%, 40%  { content: "dizajnera"; width: 8ch}
+    40%, 50%  { content: ""; width: 0ch;}
+    50%, 60%  { content: "programera"; width: 8ch}
+    60%, 70%  { content: ""; width: 0ch;}
+    70%, 80%  { content: "marketingasa"; width: 9ch}
+    80%, 90%  { content: ""; width: 0ch;}
+    90%, 100%  { content: "poduzetnika"; width: 9ch}
+}
+
+@keyframes blink-cursor {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: var(--color-cyan) }
+}
+
 @media(max-width: 1150px) {
     .navbar{
         padding: 24px 0;
