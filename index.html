@@ -82,7 +82,7 @@
                 <img alt="" role="presentation" src="assets/shift-photo.jpg">
             </div>
             <div class="sponsor-content">
-                <span class="sponsor-tag">ZLAT.NI SPONZOR</span>
+                <span class="sponsor-tag">ZLATNI SPONZOR</span>
                 <h3 class="sponsor-name">ExtensionEngine</h3>
                 <p class="sponsor-description">Kroz višegodišnju suradnju s najboljim organizacijama na svijetu kao što
                     su Harvard, MIT, Johnson & Johnson i Fitch Ratings, ExtensionEngine je prepoznat kao vodeći
@@ -389,8 +389,78 @@
 </script>
 
 <section class="sign-up">
-
+    <div class="container">
+        <h2 class="section-title">Prijavi se!</h2>
+        <div class="sign-up-content">
+            <div class="sign-up-features">
+                <div class="sign-up-feature hidden-feature">
+                    <img alt="" class="feature-icon" role="presentation" src="assets/icon-schedule.svg">
+                    <div class="feature-text">
+                        <h3 class="feature-title">Personalizirani raspored</h3>
+                        <p class="feature-description">Označi predavanja i panel rasprave na kojima ćeš sudjelovati,
+                            stvori osobni raspored.</p>
+                    </div>
+                </div>
+                <div class="sign-up-feature hidden-feature">
+                    <img alt="" class="feature-icon" role="presentation" src="assets/icon-networking.svg">
+                    <div class="feature-text">
+                        <h3 class="feature-title">Networking</h3>
+                        <p class="feature-description">Prijavi se na fly talks i radionice, upoznaj i poveži se s
+                            potencijalnim budućim poslodavcima.</p>
+                    </div>
+                </div>
+                <div class="sign-up-feature hidden-feature">
+                    <img alt="" class="feature-icon" role="presentation" src="assets/icon-rewards.svg">
+                    <div class="feature-text">
+                        <h3 class="feature-title">Brojne nagrade</h3>
+                        <p class="feature-description">Sudjelovanjem na konferenciji skupljaj bodove, osvoji vrijedne
+                            nagrade.</p>
+                    </div>
+                </div>
+                <div class="sign-up-feature hidden-feature">
+                    <img alt="" class="feature-icon" role="presentation" src="assets/icon-info.svg">
+                    <div class="feature-text">
+                        <h3 class="feature-title">Najnovije informacije</h3>
+                        <p class="feature-description">Osiguraj pristup svim novim informacijama, ne propusti važne
+                            obavijesti.</p>
+                    </div>
+                </div>
+                <div class="bottun filled" style="width: fit-content;">Prijavi se</div>
+            </div>
+            <div class="sign-up-image-container">
+                <div class="sign-up-image-wrapper">
+                    <img alt="Sign Up Image" class="sign-up-image" src="assets/signup-image.png">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible-feature');
+                    }, index * 200);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const features = document.querySelectorAll('.sign-up-feature');
+        features.forEach(feature => {
+            observer.observe(feature);
+        });
+    });
+</script>
 
 <section class="gallery">
 
