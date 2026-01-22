@@ -19,11 +19,11 @@
         </label>
 
         <div class="navbar-items">
-            <a href="#about" class="navbar-item">Konferencija</a>
-            <a href="#agenda" class="navbar-item">Raspored</a>
-            <a href="#sponsors" class="navbar-item">Sponzori</a>
-            <a href="#announcements" class="navbar-item hide-desktop">Oglasna ploča</a>
-            <a href="#contact" class="navbar-item">Kontakt</a>
+            <a class="navbar-item" href="#about">Konferencija</a>
+            <a class="navbar-item" href="#agenda">Raspored</a>
+            <a class="navbar-item" href="#sponsors">Sponzori</a>
+            <a class="navbar-item hide-desktop" href="#announcements">Oglasna ploča</a>
+            <a class="navbar-item" href="#contact">Kontakt</a>
             <div class="bottun hide-desktop">Prijava</div>
         </div>
     </nav>
@@ -208,9 +208,185 @@
     });
 </script>
 
-<section class="message-board">
+<section class="message-board" id="announcements">
+    <div class="container">
+        <h2 class="section-title">Oglasna ploča</h2>
+        <h3 class="message-board-subsection-title">Oglasi zlatnih sponzora</h3>
+    </div>
+    <div class="message-board-scroll" id="gold-scroll" onscroll="checkScroll('gold-scroll', 'gold-prev', 'gold-next')">
+        <div class="message-card">
+            <div class="message-card-content">
+                <img alt="Infobip Logo" class="company-logo" src="assets/infobip-logo-message.svg">
+                <h3 class="message-title">Frontend Developer</h3>
+                <div class="message-location">
+                    <img alt="Lokacija" class="location-icon" src="assets/location-pin.svg">
+                    <span>Zagreb, HR</span>
+                </div>
+                <p class="message-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="bottun filled card-button">Saznaj više</div>
+            </div>
+        </div>
+        <div class="message-card">
+            <div class="message-card-content">
+                <img alt="Infobip Logo" class="company-logo" src="assets/infobip-logo-message.svg">
+                <h3 class="message-title">Backend Developer</h3>
+                <div class="message-location">
+                    <img alt="Lokacija" class="location-icon" src="assets/location-pin.svg">
+                    <span>Split, HR</span>
+                </div>
+                <p class="message-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="bottun filled card-button">Saznaj više</div>
+            </div>
+        </div>
+        <div class="message-card">
+            <div class="message-card-content">
+                <img alt="Infobip Logo" class="company-logo" src="assets/infobip-logo-message.svg">
+                <h3 class="message-title">UX/UI Designer</h3>
+                <div class="message-location">
+                    <img alt="Lokacija" class="location-icon" src="assets/location-pin.svg">
+                    <span>Remote</span>
+                </div>
+                <p class="message-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="bottun filled card-button">Saznaj više</div>
+            </div>
+        </div>
+    </div>
+    <div class="container carousel-controls">
+        <div class="carousel-arrow disabled" id="gold-prev" onclick="scrollCarousel('gold-scroll', -1)">
+            <img alt="Previous" src="assets/arrow-inactive.svg" style="transform: rotate(180deg);">
+        </div>
+        <div class="carousel-arrow" id="gold-next" onclick="scrollCarousel('gold-scroll', 1)">
+            <img alt="Next" src="assets/arrow-active.svg">
+        </div>
+    </div>
 
+    <div class="container" style="margin-top: 60px;">
+        <h3 class="message-board-subsection-title">Oglasi srebrnih sponzora</h3>
+    </div>
+    <div class="message-board-scroll" id="silver-scroll"
+         onscroll="checkScroll('silver-scroll', 'silver-prev', 'silver-next')">
+        <div class="message-card-silver">
+            <div class="message-card-content">
+                <img alt="Profico Logo" class="company-logo" src="assets/profico-logo-message.svg">
+                <h3 class="message-title">Project Manager</h3>
+                <div class="message-location">
+                    <img alt="Lokacija" class="location-icon" src="assets/location-pin.svg">
+                    <span>Zadar, HR</span>
+                </div>
+                <div class="bottun filled card-button">Saznaj više</div>
+            </div>
+        </div>
+        <div class="message-card-silver">
+            <div class="message-card-content">
+                <img alt="BDR Logo" class="company-logo" src="assets/bdr-logo-message.svg">
+                <h3 class="message-title">DevOps Engineer</h3>
+                <div class="message-location">
+                    <img alt="Lokacija" class="location-icon" src="assets/location-pin.svg">
+                    <span>Zagreb, HR</span>
+                </div>
+                <div class="bottun filled card-button">Saznaj više</div>
+            </div>
+        </div>
+        <div class="message-card-silver">
+            <div class="message-card-content">
+                <img alt="Emovis Logo" class="company-logo" src="assets/emovis-logo-message.svg">
+                <h3 class="message-title">Java Developer</h3>
+                <div class="message-location">
+                    <img alt="Lokacija" class="location-icon" src="assets/location-pin.svg">
+                    <span>Zagreb, HR</span>
+                </div>
+                <div class="bottun filled card-button">Saznaj više</div>
+            </div>
+        </div>
+        <div class="message-card-silver">
+            <div class="message-card-content">
+                <img alt="HR Prodigy Logo" class="company-logo" src="assets/hr-prodigy-logo.svg">
+                <h3 class="message-title">Product Owner</h3>
+                <div class="message-location">
+                    <img alt="Lokacija" class="location-icon" src="assets/location-pin.svg">
+                    <span>Zagreb, HR</span>
+                </div>
+                <div class="bottun filled card-button">Saznaj više</div>
+            </div>
+        </div>
+        <div class="message-card-silver">
+            <div class="message-card-content">
+                <img alt="Netmedia Logo" class="company-logo" src="assets/netmedia-logo.svg">
+                <h3 class="message-title">PHP Developer</h3>
+                <div class="message-location">
+                    <img alt="Lokacija" class="location-icon" src="assets/location-pin.svg">
+                    <span>Split, HR</span>
+                </div>
+                <div class="bottun filled card-button">Saznaj više</div>
+            </div>
+        </div>
+        <div class="message-card-silver">
+            <div class="message-card-content">
+                <img alt="Typeqast Logo" class="company-logo" src="assets/typeqast-logo.svg">
+                <h3 class="message-title">.NET Developer</h3>
+                <div class="message-location">
+                    <img alt="Lokacija" class="location-icon" src="assets/location-pin.svg">
+                    <span>Split, HR</span>
+                </div>
+                <div class="bottun filled card-button">Saznaj više</div>
+            </div>
+        </div>
+    </div>
+    <div class="container carousel-controls">
+        <div class="carousel-arrow disabled" id="silver-prev" onclick="scrollCarousel('silver-scroll', -1)">
+            <img alt="Previous" src="assets/arrow-inactive.svg" style="transform: rotate(180deg);">
+        </div>
+        <div class="carousel-arrow" id="silver-next" onclick="scrollCarousel('silver-scroll', 1)">
+            <img alt="Next" src="assets/arrow-active.svg">
+        </div>
+    </div>
 </section>
+
+<script>
+    function scrollCarousel(containerId, direction) {
+        const container = document.getElementById(containerId);
+        const scrollAmount = container.firstElementChild.offsetWidth + 20;
+        container.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+
+    function checkScroll(containerId, prevArrowId, nextArrowId) {
+        const container = document.getElementById(containerId);
+        const prevArrow = document.getElementById(prevArrowId);
+        const nextArrow = document.getElementById(nextArrowId);
+
+        const tolerance = 5;
+
+        if (container.scrollLeft <= tolerance) {
+            prevArrow.classList.add('disabled');
+            prevArrow.querySelector('img').src = 'assets/arrow-inactive.svg';
+        } else {
+            prevArrow.classList.remove('disabled');
+            prevArrow.querySelector('img').src = 'assets/arrow-active.svg';
+        }
+
+        if (container.scrollWidth - container.scrollLeft - container.clientWidth <= tolerance) {
+            nextArrow.classList.add('disabled');
+            nextArrow.querySelector('img').src = 'assets/arrow-inactive.svg';
+        } else {
+            nextArrow.classList.remove('disabled');
+            nextArrow.querySelector('img').src = 'assets/arrow-active.svg';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        checkScroll('gold-scroll', 'gold-prev', 'gold-next');
+        checkScroll('silver-scroll', 'silver-prev', 'silver-next');
+    });
+</script>
 
 <section class="sign-up">
 
