@@ -28,6 +28,69 @@ body {
     padding: 0 20px;
 }
 
+.navbar {
+    padding: 16px 0px;
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-background);
+    z-index: 1000;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    width: 142px;
+    height: 48px;
+    background-image: url(assets/dumpdays-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 92px;
+}
+
+.navbar-items {
+    display: flex;
+    padding: 0px 92px;
+    gap: 40px;
+}
+
+.navbar-item {
+    position: relative;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    padding-bottom: 4px;
+}
+
+.navbar-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2.5px;
+    width: 0%;
+    background-color: var(--color-cyan);
+    transition: width 0.3s ease;
+}
+
+.navbar-item:hover::after {
+    width: 100%;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+.navbar-checkbox {
+    display: none;
+}
+
 .supporting-us {
     padding: 100px 0;
 }
@@ -69,7 +132,8 @@ body {
 }
 
 .sponsor-tag {
-    display: inline-block;
+    display: block;
+    width: fit-content;
     background-color: var(--color-cyan);
     color: var(--color-background);
     padding: 7px 16px;
@@ -86,6 +150,38 @@ body {
     font-weight: 800;
     line-height: 38px;
     margin: 0 0 16px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.sponsor-name::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-cyan);
+    animation: underline-loop 2.5s infinite cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes underline-loop {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    35% {
+        left: 0;
+        width: 100%;
+    }
+    70% {
+        left: 100%;
+        width: 0;
+    }
+    100% {
+        left: 100%;
+        width: 0;
+    }
 }
 
 .sponsor-description {
@@ -117,70 +213,108 @@ body {
     height: 22px;
 }
 
-.navbar {
-    padding: 16px 0px;
-    position: fixed;
-    width: 100%;
-    background-color: var(--color-background);
+.sponsors {
+    padding-bottom: 100px;
+    text-align: center;
 }
 
-.navbar nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar-logo {
-    width: 142px;
-    height: 48px;
-    background-image: url(assets/dumpdays-logo.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 92px;
-}
-
-.navbar-items {
-    display: flex;
-    padding: 0px 92px;
-    gap: 40px;
-}
-
-.navbar-item {
-    position: relative;
-    color: var(--color-white);
-    font-size: 16px;
+.sponsor-tier-title {
+    font-size: 32px;
     font-weight: 800;
-    text-decoration: none;
-    padding-bottom: 4px;
+    line-height: 38px;
+    color: #30CEC2;
+    margin-bottom: 48px;
 }
 
-.navbar-item::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2.5px;
-    width: 0%;
-    background-color: var(--color-cyan);
-    transition: width 0.3s ease;
+.sponsor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
 }
 
-.navbar-item:hover::after{
-    width: 100%;
+.sponsor-grid img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-.navbar-toggle {
-    display: none;
-    cursor: pointer;
-    color: var(--color-white);
+.sponsor-grid img:hover {
+    opacity: 1;
 }
 
-.navbar-checkbox {
-    display: none;
+.silver-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 60px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media(max-width: 1150px) {
-    .navbar{
+.silver-grid img {
+    max-height: 32px;
+    justify-self: center;
+}
+
+.bronze-grid img {
+    max-height: 32px;
+}
+
+.organizational-grid img {
+    height: 31px;
+}
+
+.lottery-grid img {
+    height: 41px;
+}
+
+.media-grid {
+    gap: 80px;
+}
+
+.media-grid img[alt="Bug"] {
+    height: 16px;
+}
+
+.media-grid img[alt="Dalmacija Danas"] {
+    height: 28px;
+}
+
+.media-grid img[alt="Netokracija"] {
+    height: 21px;
+}
+
+.media-grid img[alt="Split Tech City"] {
+    height: 14px;
+}
+
+.friends-grid {
+    gap: 80px;
+}
+
+.friends-grid img[alt="Sveučilište"] {
+    height: 72px;
+}
+
+.friends-grid img[alt="SZT"] {
+    height: 45px;
+}
+
+.friends-grid img[alt="Grad Split"] {
+    height: 73px;
+}
+
+.friends-grid img[alt="Split Tech City"] {
+    height: 15px;
+}
+
+@media (max-width: 1150px) {
+    .navbar {
         padding: 24px 0;
     }
 
@@ -230,6 +364,14 @@ body {
         padding: 0 16px;
     }
 
+    .navbar-logo {
+        margin-left: 24px;
+    }
+
+    .navbar-toggle {
+        margin-right: 24px;
+    }
+
     .supporting-us {
         padding: 60px 0;
     }
@@ -274,47 +416,73 @@ body {
         height: 17px;
     }
 
-    .navbar{
-        padding: 24px 0;
+    .sponsors {
+        padding-bottom: 40px;
     }
 
-    .navbar-logo {
-        width: 33px;
-        height: 40px;
-        background-image: url(assets/dumpdays-icon.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-left: 24px;
+    .sponsor-tier-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 32px;
     }
 
-    .navbar-item {
-        color: var(--color-white);
-        font-size: 20px;
-        font-weight: 800;
-        line-height: 30px;
-        text-decoration: none;
+    .sponsor-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 20px;
+        justify-items: center;
+        margin-bottom: 40px;
     }
 
-    .navbar-items {
-        display: none;
-        width: 100%;
-        height: 812px;
-        align-self: flex-start;
-        flex-direction: column;
-        align-items: center;
-        gap: 48px;
-        background-color: var(--color-background);
-        position: absolute;
-        margin: 56px 0;
-        padding: 96px 0;
+    .silver-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: none;
+        gap: 40px 20px;
     }
 
-    .navbar-toggle {
-        display: block;
-        margin-right: 24px;
-    }
-
-    .navbar-checkbox:checked + .navbar-toggle + .navbar-items {
+    .organizational-grid, .lottery-grid {
         display: flex;
+        justify-content: center;
+    }
+
+    .silver-grid img, .bronze-grid img {
+        max-height: 32px;
+    }
+
+    .organizational-grid img, .lottery-grid img {
+        max-height: 40px;
+    }
+
+    .media-grid img[alt="Bug"] {
+        height: 13px;
+    }
+
+    .media-grid img[alt="Dalmacija Danas"] {
+        height: 21px;
+    }
+
+    .media-grid img[alt="Netokracija"] {
+        height: 18px;
+    }
+
+    .media-grid img[alt="Split Tech City"] {
+        height: 12px;
+    }
+
+    .friends-grid img[alt="Sveučilište"] {
+        height: 54px;
+    }
+
+    .friends-grid img[alt="SZT"] {
+        height: 34px;
+    }
+
+    .friends-grid img[alt="Grad Split"] {
+        height: 55px;
+    }
+
+    .friends-grid img[alt="Split Tech City"] {
+        height: 11px;
     }
 }
