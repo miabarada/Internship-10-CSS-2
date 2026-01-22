@@ -1,345 +1,488 @@
 :root {
-   --color-background: #0A181B;
-   --color-white: #FFFFFF;
-   --color-white-90: rgba(255, 255, 255, 0.9);
-   --color-white-80: rgba(255, 255, 255, 0.8);
-   --color-white-5: rgba(255, 255, 255, 0.05);
-   --color-cyan: rgb(48, 206, 194);
-   --color-cyan-40: rgba(48, 206, 194, 0.4);
-   --color-red: #D73246;
-   --color-blue: #1E88E5;
+    --color-background: #0A181B;
+    --color-white: #FFFFFF;
+    --color-white-90: rgba(255, 255, 255, 0.9);
+    --color-white-80: rgba(255, 255, 255, 0.8);
+    --color-white-5: rgba(255, 255, 255, 0.05);
+    --color-cyan: rgb(48, 206, 194);
+    --color-cyan-40: rgba(48, 206, 194, 0.4);
+    --color-red: #D73246;
+    --color-blue: #1E88E5;
 }
+
 * {
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-   background-color: var(--color-background);
-   color: var(--color-white);
-   font-family: Arial, Helvetica, sans-serif;
-   margin: 0;
-   padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-white);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 .container {
-   max-width: 1240px;
-   margin: 0 auto;
-   padding: 0 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
 .navbar {
-   padding: 16px 0px;
-   position: fixed;
-   width: 100%;
-   background-color: var(--color-background);
-   z-index: 1000;
+    padding: 16px 0px;
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-background);
+    z-index: 1000;
 }
+
 .navbar nav {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 .navbar-logo {
-   width: 142px;
-   height: 48px;
-   background-image: url(assets/dumpdays-logo.svg);
-   background-repeat: no-repeat;
-   background-size: contain;
-   margin-left: 92px;
+    width: 142px;
+    height: 48px;
+    background-image: url(assets/dumpdays-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 92px;
 }
+
 .navbar-items {
-   display: flex;
-   padding: 0px 92px;
-   gap: 40px;
+    display: flex;
+    padding: 0px 92px;
+    gap: 40px;
 }
+
 .navbar-item {
-   position: relative;
-   color: var(--color-white);
-   font-size: 16px;
-   font-weight: 800;
-   text-decoration: none;
-   padding-bottom: 4px;
+    position: relative;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    padding-bottom: 4px;
 }
-.navbar-item::after{
-   content: "";
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   height: 2.5px;
-   width: 0%;
-   background-color: var(--color-cyan);
-   transition: width 0.3s ease;
+
+.navbar-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2.5px;
+    width: 0%;
+    background-color: var(--color-cyan);
+    transition: width 0.3s ease;
 }
-.navbar-item:hover::after{
-   width: 100%;
+
+.navbar-item:hover::after {
+    width: 100%;
 }
+
 .navbar-toggle {
-   display: none;
-   cursor: pointer;
-   color: var(--color-white);
+    display: none;
+    cursor: pointer;
+    color: var(--color-white);
 }
+
 .navbar-checkbox {
-   display: none;
+    display: none;
 }
+
 .supporting-us {
-   padding: 100px 0;
+    padding: 100px 0;
 }
+
 .section-title {
-   font-size: 48px;
-   font-weight: 800;
-   line-height: 58px;
-   text-align: center;
-   margin-bottom: 80px;
-   color: var(--color-white);
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 58px;
+    text-align: center;
+    margin-bottom: 80px;
+    color: var(--color-white);
 }
+
 .sponsor-block {
-   display: flex;
-   align-items: center;
-   gap: 60px;
-   margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
 }
+
 .sponsor-block.reverse {
-   flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
+
 .sponsor-image {
-   flex: 1;
+    flex: 1;
 }
+
 .sponsor-image img {
-   width: 100%;
-   height: 410px;
-   object-fit: cover;
-   border-radius: 50px;
-   display: block;
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 50px;
+    display: block;
 }
+
 .sponsor-content {
-   flex: 1;
+    flex: 1;
 }
+
 .sponsor-tag {
-   display: block;
-   width: fit-content;
-   background-color: var(--color-cyan);
-   color: var(--color-background);
-   padding: 7px 16px;
-   border-radius: 8px;
-   font-size: 14px;
-   font-weight: 800;
-   letter-spacing: 0.5px;
-   margin-bottom: 16px;
-   text-transform: uppercase;
+    display: block;
+    width: fit-content;
+    background-color: var(--color-cyan);
+    color: var(--color-background);
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
 }
+
 .sponsor-name {
-   font-size: 32px;
-   font-weight: 800;
-   line-height: 38px;
-   margin: 0 0 16px 0;
-   position: relative;
-   display: inline-block;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 38px;
+    margin: 0 0 16px 0;
+    position: relative;
+    display: inline-block;
 }
+
 .sponsor-name::after {
-   content: '';
-   position: absolute;
-   width: 0;
-   height: 2px;
-   bottom: -4px;
-   left: 0;
-   background-color: var(--color-cyan);
-   animation: underline-loop 2.5s infinite cubic-bezier(0.65, 0, 0.35, 1);
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-cyan);
+    animation: underline-loop 2.5s infinite cubic-bezier(0.65, 0, 0.35, 1);
 }
+
 @keyframes underline-loop {
-   0% { left: 0; width: 0; }
-   35% { left: 0; width: 100%; }
-   70% { left: 100%; width: 0; }
-   100% { left: 100%; width: 0; }
+    0% {
+        left: 0;
+        width: 0;
+    }
+    35% {
+        left: 0;
+        width: 100%;
+    }
+    70% {
+        left: 100%;
+        width: 0;
+    }
+    100% {
+        left: 100%;
+        width: 0;
+    }
 }
+
 .sponsor-description {
-   font-size: 16px;
-   font-weight: 400;
-   line-height: 24px;
-   color: var(--color-white-80);
-   margin: 0 0 32px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-white-80);
+    margin: 0 0 32px 0;
 }
+
 .sponsor-links {
-   display: flex;
-   gap: 20px;
-   align-items: center;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
+
 .sponsor-link {
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .sponsor-link img[alt="Shift"] {
-   width: 86px;
-   height: 58px;
+    width: 86px;
+    height: 58px;
 }
+
 .sponsor-link img[alt="Netmedia"] {
-   width: 114px;
-   height: 22px;
+    width: 114px;
+    height: 22px;
 }
+
 .sponsors {
-   padding-bottom: 100px;
-   text-align: center;
+    padding-bottom: 100px;
+    text-align: center;
 }
+
 .sponsor-tier-title {
-   font-size: 32px;
-   font-weight: 800;
-   line-height: 38px;
-   color: #30CEC2;
-   margin-bottom: 48px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 38px;
+    color: #30CEC2;
+    margin-bottom: 48px;
 }
+
 .sponsor-grid {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   gap: 60px;
-   margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
 }
+
 .sponsor-grid img {
-   max-width: 100%;
-   height: auto;
-   opacity: 0.8;
-   transition: opacity 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
+
 .sponsor-grid img:hover {
-   opacity: 1;
+    opacity: 1;
 }
+
 .silver-grid {
-   display: grid;
-   grid-template-columns: repeat(5, 1fr);
-   gap: 40px 60px;
-   max-width: 1100px;
-   margin-left: auto;
-   margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 60px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.silver-grid img { max-height: 32px; justify-self: center; }
-.bronze-grid img { max-height: 32px; }
-.organizational-grid img { height: 31px; }
-.lottery-grid img { height: 41px; }
-.media-grid { gap: 80px; }
-.media-grid img[alt="Bug"] { height: 16px; }
-.media-grid img[alt="Dalmacija Danas"] { height: 28px; }
-.media-grid img[alt="Netokracija"] { height: 21px; }
-.media-grid img[alt="Split Tech City"] { height: 14px; }
-.friends-grid { gap: 80px; }
-.friends-grid img[alt="Sveučilište"] { height: 72px; }
-.friends-grid img[alt="SZT"] { height: 45px; }
-.friends-grid img[alt="Grad Split"] { height: 73px; }
-.friends-grid img[alt="Split Tech City"] { height: 15px; }
+
+.silver-grid img {
+    max-height: 32px;
+    justify-self: center;
+}
+
+.bronze-grid img {
+    max-height: 32px;
+}
+
+.organizational-grid img {
+    height: 31px;
+}
+
+.lottery-grid img {
+    height: 41px;
+}
+
+.media-grid {
+    gap: 80px;
+}
+
+.media-grid img[alt="Bug"] {
+    height: 16px;
+}
+
+.media-grid img[alt="Dalmacija Danas"] {
+    height: 28px;
+}
+
+.media-grid img[alt="Netokracija"] {
+    height: 21px;
+}
+
+.media-grid img[alt="Split Tech City"] {
+    height: 14px;
+}
+
+.friends-grid {
+    gap: 80px;
+}
+
+.friends-grid img[alt="Sveučilište"] {
+    height: 72px;
+}
+
+.friends-grid img[alt="SZT"] {
+    height: 45px;
+}
+
+.friends-grid img[alt="Grad Split"] {
+    height: 73px;
+}
+
+.friends-grid img[alt="Split Tech City"] {
+    height: 15px;
+}
+
 @media (max-width: 1150px) {
-   .navbar{
-       padding: 24px 0;
-   }
-   .navbar-logo {
-       width: 33px;
-       height: 40px;
-       background-image: url(assets/dumpdays-icon.svg);
-       background-repeat: no-repeat;
-       background-size: contain;
-       margin-left: 92px;
-   }
-   .navbar-item {
-       color: var(--color-white);
-       font-size: 20px;
-       font-weight: 800;
-       line-height: 30px;
-       text-decoration: none;
-   }
-   .navbar-items {
-       display: none;
-       width: 100%;
-       height: 812px;
-       align-self: flex-start;
-       flex-direction: column;
-       align-items: center;
-       gap: 48px;
-       background-color: var(--color-background);
-       position: absolute;
-       margin: 56px 0;
-       padding: 96px 0;
-   }
-   .navbar-toggle {
-       display: block;
-       margin-right: 92px;
-   }
-   .navbar-checkbox:checked + .navbar-toggle + .navbar-items {
-       display: flex;
-   }
+    .navbar {
+        padding: 24px 0;
+    }
+
+    .navbar-logo {
+        width: 33px;
+        height: 40px;
+        background-image: url(assets/dumpdays-icon.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 92px;
+    }
+
+    .navbar-item {
+        color: var(--color-white);
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 30px;
+        text-decoration: none;
+    }
+
+    .navbar-items {
+        display: none;
+        width: 100%;
+        height: 812px;
+        align-self: flex-start;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        background-color: var(--color-background);
+        position: absolute;
+        margin: 56px 0;
+        padding: 96px 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+        margin-right: 92px;
+    }
+
+    .navbar-checkbox:checked + .navbar-toggle + .navbar-items {
+        display: flex;
+    }
 }
+
 @media (max-width: 768px) {
-   .container {
-      padding: 0 16px;
-   }
-   .navbar-logo {
-       margin-left: 24px;
-   }
-   .navbar-toggle {
-       margin-right: 24px;
-   }
-   .supporting-us {
-      padding: 60px 0;
-   }
-   .section-title {
-      font-size: 32px;
-      line-height: 38px;
-      margin-bottom: 60px;
-   }
-   .sponsor-block {
-      flex-direction: column;
-      gap: 32px;
-      margin-bottom: 80px;
-   }
-   .sponsor-block.reverse {
-      flex-direction: column;
-   }
-   .sponsor-image {
-      width: 100%;
-   }
-   .sponsor-image img {
-      height: 240px;
-      border-radius: 30px;
-   }
-   .sponsor-name {
-      font-size: 24px;
-      line-height: 36px;
-   }
-   .sponsor-link img[alt="Shift"] {
-      width: 67px;
-      height: 45px;
-   }
-   .sponsor-link img[alt="Netmedia"] {
-      width: 89px;
-      height: 17px;
-   }
-   .sponsors {
-      padding-bottom: 40px;
-   }
-   .sponsor-tier-title {
-      font-size: 24px;
-      line-height: 32px;
-      margin-bottom: 32px;
-   }
-   .sponsor-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px 20px;
-      justify-items: center;
-      margin-bottom: 40px;
-   }
-   .silver-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: none;
-      gap: 40px 20px;
-   }
-   .organizational-grid, .lottery-grid {
-      display: flex;
-      justify-content: center;
-   }
-   .silver-grid img, .bronze-grid img { max-height: 32px; }
-   .organizational-grid img, .lottery-grid img { max-height: 40px; }
-   .media-grid img[alt="Bug"] { height: 13px; }
-   .media-grid img[alt="Dalmacija Danas"] { height: 21px; }
-   .media-grid img[alt="Netokracija"] { height: 18px; }
-   .media-grid img[alt="Split Tech City"] { height: 12px; }
-   .friends-grid img[alt="Sveučilište"] { height: 54px; }
-   .friends-grid img[alt="SZT"] { height: 34px; }
-   .friends-grid img[alt="Grad Split"] { height: 55px; }
-   .friends-grid img[alt="Split Tech City"] { height: 11px; }
+    .container {
+        padding: 0 16px;
+    }
+
+    .navbar-logo {
+        margin-left: 24px;
+    }
+
+    .navbar-toggle {
+        margin-right: 24px;
+    }
+
+    .supporting-us {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 60px;
+    }
+
+    .sponsor-block {
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 80px;
+    }
+
+    .sponsor-block.reverse {
+        flex-direction: column;
+    }
+
+    .sponsor-image {
+        width: 100%;
+    }
+
+    .sponsor-image img {
+        height: 240px;
+        border-radius: 30px;
+    }
+
+    .sponsor-name {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .sponsor-link img[alt="Shift"] {
+        width: 67px;
+        height: 45px;
+    }
+
+    .sponsor-link img[alt="Netmedia"] {
+        width: 89px;
+        height: 17px;
+    }
+
+    .sponsors {
+        padding-bottom: 40px;
+    }
+
+    .sponsor-tier-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 32px;
+    }
+
+    .sponsor-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 20px;
+        justify-items: center;
+        margin-bottom: 40px;
+    }
+
+    .silver-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: none;
+        gap: 40px 20px;
+    }
+
+    .organizational-grid, .lottery-grid {
+        display: flex;
+        justify-content: center;
+    }
+
+    .silver-grid img, .bronze-grid img {
+        max-height: 32px;
+    }
+
+    .organizational-grid img, .lottery-grid img {
+        max-height: 40px;
+    }
+
+    .media-grid img[alt="Bug"] {
+        height: 13px;
+    }
+
+    .media-grid img[alt="Dalmacija Danas"] {
+        height: 21px;
+    }
+
+    .media-grid img[alt="Netokracija"] {
+        height: 18px;
+    }
+
+    .media-grid img[alt="Split Tech City"] {
+        height: 12px;
+    }
+
+    .friends-grid img[alt="Sveučilište"] {
+        height: 54px;
+    }
+
+    .friends-grid img[alt="SZT"] {
+        height: 34px;
+    }
+
+    .friends-grid img[alt="Grad Split"] {
+        height: 55px;
+    }
+
+    .friends-grid img[alt="Split Tech City"] {
+        height: 11px;
+    }
 }
