@@ -31,7 +31,7 @@ body {
 }
 
 .navbar {
-    padding: 16px 0px;
+    padding: 16px 0;
     position: fixed;
     width: 100%;
     background-color: var(--color-background);
@@ -55,7 +55,7 @@ body {
 
 .navbar-items {
     display: flex;
-    padding: 0px 92px;
+    padding: 0 92px;
     gap: 40px;
 }
 
@@ -74,7 +74,7 @@ body {
     left: 0;
     bottom: 0;
     height: 2.5px;
-    width: 0%;
+    width: 0;
     background-color: var(--color-cyan);
     transition: width 0.3s ease;
 }
@@ -267,7 +267,7 @@ body {
     left: 0;
     bottom: 0;
     height: 2.5px;
-    width: 0%;
+    width: 0;
     background-color: var(--color-cyan);
     transition: width 0.3s ease;
 }
@@ -380,7 +380,7 @@ body {
     margin: 0;
 }
 
-.bottun {
+.button {
     display: inline-flex;
     height: 48px;
     padding: 12px 32px;
@@ -397,14 +397,14 @@ body {
     cursor: pointer;
 }
 
-.bottun:hover {
+.button:hover {
     border: 1px solid var(--color-cyan);
     background-color: var(--color-cyan);
     color: var(--color-background);
     transition: background-color 0.1s ease, transform 0.1s ease;
 }
 
-.bottun-container {
+.button-container {
     display: flex;
     flex-direction: row;
     gap: 8px;
@@ -412,7 +412,7 @@ body {
 
 .header-image {
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 580px;
     width: 300px;
     height: 382px;
@@ -456,7 +456,7 @@ body {
 .active-presentation-info {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 0;
 }
 
 .active-presentation-title {
@@ -507,13 +507,13 @@ body {
     border-right: 8px solid var(--color-cyan);
     white-space: nowrap;
     animation: typing 30s steps(8, end) infinite, blink-cursor 2s step-end infinite;
-    width: 0px;
+    width: 0;
 }
 
 @keyframes typing {
     0%, 10% {
         content: "";
-        width: 0ch;
+        width: 0;
     }
     10%, 20% {
         content: "digitalaca";
@@ -521,7 +521,7 @@ body {
     }
     20%, 30% {
         content: "";
-        width: 0ch;
+        width: 0;
     }
     30%, 40% {
         content: "dizajnera";
@@ -529,7 +529,7 @@ body {
     }
     40%, 50% {
         content: "";
-        width: 0ch;
+        width: 0;
     }
     50%, 60% {
         content: "programera";
@@ -537,7 +537,7 @@ body {
     }
     60%, 70% {
         content: "";
-        width: 0ch;
+        width: 0;
     }
     70%, 80% {
         content: "marketingasa";
@@ -545,7 +545,7 @@ body {
     }
     80%, 90% {
         content: "";
-        width: 0ch;
+        width: 0;
     }
     90%, 100% {
         content: "poduzetnika";
@@ -580,9 +580,7 @@ body {
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    padding: 20px 0;
-    padding-left: calc(50% - 600px);
-    padding-right: 20px;
+    padding: 20px 20px 20px calc(50% - 600px);
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -674,13 +672,13 @@ body {
     margin-top: auto;
 }
 
-.bottun.filled {
+.button.filled {
     background-color: var(--color-cyan);
     color: var(--color-background);
     border: 1px solid var(--color-cyan);
 }
 
-.bottun.filled:hover {
+.button.filled:hover {
     background-color: transparent;
     color: var(--color-white);
     border: 1px solid var(--color-cyan);
@@ -1019,18 +1017,17 @@ body {
     }
 
     .header {
-        padding: 0px 24px;
         background-image: url(assets/header-mobile.png);
         background-position: top;
         background-size: 100%;
-        padding-top: 409px;
+        padding: 409px 24px 0;
     }
 
     .hide-mobile {
         display: none;
     }
 
-    .bottun {
+    .button {
         background-color: var(--color-cyan);
         height: 48px;
         padding: 12px 32px;
@@ -1052,11 +1049,10 @@ body {
 
     .message-board-scroll {
         flex-direction: row;
-        padding: 0 16px;
         gap: 16px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        padding-bottom: 20px;
+        padding: 0 16px 20px;
     }
 
     .message-board-scroll::-webkit-scrollbar {
@@ -1136,5 +1132,216 @@ body {
         justify-content: center;
         margin-bottom: 40px;
         margin-right: 0;
+    }
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 100px 0;
+    background-color: var(--color-background);
+    overflow: hidden;
+}
+
+.gallery-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 58px;
+    text-align: center;
+    margin-bottom: 80px;
+    color: var(--color-white);
+}
+
+.gallery-content {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-track-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+}
+
+.top-track {
+    animation: scroll-left 60s linear infinite;
+}
+
+.bottom-track {
+    animation: scroll-right 60s linear infinite;
+}
+
+.gallery-item {
+    flex-shrink: 0;
+}
+
+.gallery-item img {
+    height: 288px;
+    width: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.stat-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray);
+    border-radius: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+    width: 295px;
+    height: 288px;
+}
+
+.stat-bg {
+    display: none;
+}
+
+.stat-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 30px;
+}
+
+.stat-label {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 30px;
+}
+
+.timeline {
+    position: absolute;
+    bottom: -60px;
+    left: 385px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    pointer-events: none;
+}
+
+.timeline-line {
+    position: absolute;
+    bottom: 40px;
+    left: 3px;
+    height: 648px;
+    width: 4px;
+    background-image: linear-gradient(to bottom, var(--color-white-80) 12px, transparent 12px);
+    background-size: 4px 32px;
+    background-repeat: repeat-y;
+}
+
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    z-index: 2;
+}
+
+.timeline-year {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    color: var(--color-cyan);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        padding: 60px 0 100px 0;
+    }
+
+    .gallery-title {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 40px;
+        padding: 0 24px;
+    }
+
+    .gallery-content {
+        height: 420px;
+        margin-bottom: 40px;
+    }
+
+    .gallery-item img {
+        height: 175px;
+    }
+
+    .stat-item {
+        width: 180px;
+        height: 175px;
+    }
+
+    .stat-number {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .stat-label {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .timeline {
+        left: 100px;
+        bottom: -50px;
+    }
+
+    .timeline-line {
+        height: 430px;
+        width: 4px;
+        background-size: 4px 24px;
+        left: 3px;
+        bottom: 30px;
+    }
+
+    .timeline-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .timeline-year {
+        font-size: 24px;
+        line-height: 30px;
     }
 }
