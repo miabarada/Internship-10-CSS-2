@@ -568,13 +568,13 @@ body {
 
 .about-container {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     width: 100%;
     gap: 64px;
 }
 
 .bg-container {
-    width: 760px;  
+    width: 760px;
     height: 480px;
     position: relative;
 }
@@ -601,11 +601,21 @@ body {
 }
 
 @keyframes fade {
-    0%   { opacity: 0; }
-    10%  { opacity: 1; }
-    40%  { opacity: 1; }
-    50%  { opacity: 0; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .background-image1 {
@@ -1264,7 +1274,7 @@ body {
     .about-info {
         align-self: flex-start;
     }
-    
+
     .message-board {
         padding: 60px 0;
     }
@@ -1388,7 +1398,6 @@ body {
     }
 }
 
-/* Gallery Section */
 .gallery {
     padding: 100px 0;
     background-color: var(--color-background);
@@ -1596,5 +1605,82 @@ body {
     .timeline-year {
         font-size: 24px;
         line-height: 30px;
+    }
+}
+
+.footer-contact {
+    padding-left: 120px;
+}
+
+@media (max-width: 768px) {
+    .footer-contact {
+        padding-left: 20px
+    }
+}
+
+#contact-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 58px;
+    color: var(--color-white);
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 80px;
+}
+
+.contact-button {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-white);
+    transition: opacity 0.2s;
+}
+
+#contact-button-blue {
+    background-color: var(--color-blue);
+}
+
+#contact-button-cyan {
+    background-color: var(--color-cyan);
+}
+
+.contact-button > img {
+    object-fit: contain;
+    height: 24px;
+}
+
+.footer-social {
+    background-color: var(--color-gray);
+    border-radius: 20px;
+    padding: 20px 40px;
+    margin: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icons img {
+    object-fit: contain;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .footer-social {
+        flex-direction: column;
+        margin: 20px;
     }
 }
