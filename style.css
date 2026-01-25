@@ -1091,10 +1091,6 @@ body {
 .speaker-logo {
     width: 172px;
     height: 41px;
-    background-image: url(assets/rimac-logo.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .background-image3 {
@@ -1191,6 +1187,14 @@ body {
 
     .background-image3 {
         opacity: 0.6;
+    }
+
+    .days-2021 {
+        padding: 70px 92px;
+    }
+
+    .active2 {
+        display: none;
     }
 }
 
@@ -1515,6 +1519,10 @@ body {
 
     .content-container {
         flex-direction: column;
+    }
+
+    .days-2021 {
+        display: none;
     }
 }
 
