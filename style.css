@@ -1062,6 +1062,69 @@ body {
     gap: 8px;
 }
 
+.events {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.event-transparent {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    padding: 40px 8px;
+    align-items: baseline;
+}
+
+.event-hour {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 108px;
+    color: var(--color-white-80);
+}
+
+.event-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px;
+    color: var(--color-white);
+}
+
+.event-default {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    padding: 40px 8px;
+    align-items: baseline;
+}
+
+.event-default-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field-tag {
+    display: inline-block;
+    background-color: var(--color-cyan);
+    padding: 8px 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 112.8%;
+    color: var(--color-background);    
+}
+
+.expand-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
 @media (max-width: 1150px) {
     .navbar {
         padding: 24px 0;
