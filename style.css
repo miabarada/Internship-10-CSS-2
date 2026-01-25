@@ -985,6 +985,83 @@ body {
     transform: translateX(0);
 }
 
+.agenda {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 205px;
+    width: 100%;
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 72px;
+}
+
+.date-tag {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    border-radius: 20px;
+    border: 2px solid var(--color-white);
+    align-items: center;
+}
+
+.date-tag h3 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 38px;
+    color: var(white);
+    margin: 0;
+}
+
+.date-tag p {
+    color: var(--color-white);
+    margin: 0;
+}
+
+.date-tag:hover {
+    color: var(--color-cyan);
+    border: 2px solid var(--color-cyan);
+}
+
+.date-tag:hover h3 {
+    color: var(--color-cyan);
+}
+
+.date-tag:hover p {
+    color: var(--color-cyan);
+}
+
+.dates {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.type-tag {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+}
+
+.type-tag:hover {
+    border: 2px solid var(--color-cyan);
+    color: var(--color-cyan);
+}
+
+.types {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
 @media (max-width: 1150px) {
     .navbar {
         padding: 24px 0;
