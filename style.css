@@ -467,7 +467,8 @@ body {
 
 .ongoing-tag {
     height: fit-content;
-    display: flex;
+    width: fit-content;
+    display: inline-flex;
     flex-direction: row;
     gap: 4px;
     padding: 2px 8px;
@@ -479,7 +480,7 @@ body {
     color: var(--color-red);
     border: solid 1px var(--color-red);
     border-radius: 6px;
-    align-items: center;
+    align-items: baseline;
     margin-top: 8px;
 }
 
@@ -831,6 +832,7 @@ body {
     flex-direction: column;
     gap: 8px;
     position: relative;
+    padding-top: 20px;
     z-index: 1;
 }
 
@@ -926,6 +928,7 @@ body {
     background-repeat: no-repeat;
     align-self: flex-start;
     margin-right: auto;
+    transform: scaleX(-1);
 }
 
 .content-feature {
@@ -983,6 +986,128 @@ body {
 .visible-feature {
     opacity: 1;
     transform: translateX(0);
+}
+
+.days-2021 {
+    padding: 70px 205px;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+}
+
+.days-2021-info {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.days-2021-title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-self: flex-start;
+}
+
+.days-2021-title h2 {
+    margin: 0;
+    text-align: left;
+    max-width: 568px;
+}
+
+.days-2021-title p {
+    margin: 0;
+    max-width: 505px;
+}
+
+.days-2021-features {
+    display: flex;
+    flex-direction: row;
+}
+
+.days-2021-feature {
+    display: flex;
+    align-items: flex-start;
+    max-width: 440px;
+}
+
+.feature2 {
+    margin-left: auto;
+}
+
+.active2 {
+    background-color: var(--color-gray);
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 64px;
+    width: 100%;
+    border-radius: 40px;
+    align-items: center;
+}
+
+.active2-image {
+    width: 256px;
+    height: 256px;
+    border-radius: 26px;
+    background-image: url(assets/ongoing.jpg);
+    background-size: cover;
+    background-position: 0px -20px;
+    background-repeat: no-repeat;
+}
+
+.active2-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.active2-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 628px;
+}
+
+.active2-speaker-info {
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+    align-items: center;
+}
+
+.separator {
+    width: 1px;
+    height: 56px;
+    background-color: rgb(255, 255, 255, 0.27);
+}
+
+.speaker {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-right: auto;
+}
+
+.speaker-logo {
+    width: 172px;
+    height: 41px;
+    background-image: url(assets/rimac-logo.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background-image3 {
+    position: absolute;
+    right: -10px;
+    top: 3300px;
+    width: 378px;
+    height: 378px;
+    background-image: url(assets/background3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 @media (max-width: 1150px) {
@@ -1062,6 +1187,10 @@ body {
 
     .content {
         padding: 160px 92px;
+    }
+
+    .background-image3 {
+        opacity: 0.6;
     }
 }
 
@@ -1327,7 +1456,8 @@ body {
 
     .feature-text {
         z-index: 1;
-        padding-left: 16px;
+        padding-left: 24px;
+        margin-top: -40px;
     }
 
     .feature-title {
